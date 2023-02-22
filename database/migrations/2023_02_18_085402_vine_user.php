@@ -16,7 +16,7 @@ class VineUser extends Migration
         $table->increments('User_id');;
         $table->string("User_name");
         $table->string("Vine_id");
-        $table->string("Mobileno");
+        $table->string("User_mobileno");
         $table->string("Registerdate");
         $table->string("Useddate");
         $table->string("Qrcode");

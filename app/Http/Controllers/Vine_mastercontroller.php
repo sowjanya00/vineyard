@@ -38,6 +38,7 @@ public function create()
             
                  'Vine_name' => $data['Vine_name'],
              'Googleparameters' => $data['Googleparameters'],
+             'Url' => $data['Url'],
              'Targetedcustomers' => $data['Targetedcustomers'],
              'Usedcustomers' => $data['Usedcustomers'],
              'Contactperson' => $data['Contactperson'],
@@ -93,13 +94,13 @@ public function create()
 
 
 
-        return redirect('Vinemaster')->with('flash_message', 'Vinemaster Updated!');  
+        return redirect('Vine_master')->with('flash_message', 'Vinemaster Updated!');  
     }
   
     public function destroy($id)
     {
         Vinemaster::destroy($id);
-        return redirect('Vinemaster')->with('flash_message', 'Vinemaster deleted!');  
+        return redirect('Vine_master')->with('flash_message', 'Vinemaster deleted!');  
     }
 
 

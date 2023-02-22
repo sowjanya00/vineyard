@@ -9,22 +9,13 @@
 <form action="{{ route('Vine_master.store') }}" method="post">
     @csrf
     {!! csrf_field() !!}
-    <label for="Vinename">Vinename:</label>
-    <!-- <input type="text" id="Vinename" name="Vinename" required></br> -->
-    <select name="Vine_name" id="Vine_id" class="form-control">
-                        
-                             <option value=" ">-- Select Vine name--</option> 
-                             
-                             {{$Vine_master}} 
-                             @foreach ($Vine_master as $data) 
-                             <option value="{{$data->Vine_name}}">{{ $data->Vine_name }}</option> 
-                             
-                             @endforeach 
-                              
-                        </select>
-                    </div>
+</div>
+    <label for="Vine_name">Vinename:</label>
+    <input type="text" id="Vine_name" name="Vine_name" required></br> 
     <label for="Googleparameters">Googleparameters:</label>
-     <textarea id="url" name="Googleparameters" required></textarea></br> 
+     <textarea id="text" name="Googleparameters" required></textarea></br> 
+      <label for="Url">url:</label> 
+     <textarea id="text" name="Url" required></textarea></br> 
     <label for="Targetedcustomers">Targetedcustomers:</label>
      <input type="text" id="Targetedcustomers" name="Targetedcustomers" required></br> 
     <label for="Usedcustomers">Usedcustomers:</label>

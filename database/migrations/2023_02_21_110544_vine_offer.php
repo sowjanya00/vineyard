@@ -15,15 +15,15 @@ class VineOffer extends Migration
     {
         Schema::create('Vine_offer', function (Blueprint $table) {
             $table->increments('Offer_id');;
-            $table->string("Vine_id");
+            $table->string("Vine_name");
             $table->string("Offer_mobileno");
             $table->string("Offer_details");
-            $table->string("Valid_upto");
-            $table->string("Offerused");
+            $table->date("Valid_upto");
+            $table->boolean("Offerused");
             $table->string("status");
             
             $table->timestamps();
-        });
+        }); 
     }
 
     /**

@@ -18,8 +18,9 @@
                                 <thead>
                                     <tr>
                                         <th>Sno</th>
-                                        <th>VineName</th>
+                                        <th>Vinename</th>
                                         <th>Googleparameters</th>
+                                        <th>Url</th>
                                         <th>Targetedcustomers</th>
                                         <th>Usedcustomers</th>
                                         <th>Contactperson</th>
@@ -37,6 +38,7 @@
                                         
                                         <td>{{ $item->Vine_name }}</td>
                                         <td>{{ $item->Googleparameters }}</td>
+                                        <td>{{ $item->Url}}</td>
                                         <td>{{ $item->Targetedcustomers }}</td>
                                         <td>{{ $item->Usedcustomers}}</td>
                                         <td>{{ $item->Contactperson }}</td>
@@ -48,7 +50,7 @@
 
                                         <td>
                                             <a href="{{ url('/Vine_master/' . $item->id) }}" title="View Vine_master "><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('/Vine_master/'. $item->id . '/edit') }}" title="Edit Vine_master"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a href="{{ url('/Vine_master/'. $item->id . 'edit') }}" title="Edit Vine_master"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
                                             <form method="POST" action="{{ url('/vine_master' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}

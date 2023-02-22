@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Vine_mastercontroller;
+use App\Http\Controllers\Vine_offercontroller;
+use App\Http\Controllers\ Vine_usercontroller;
 
 
 /*
@@ -22,4 +24,7 @@ Route::get('/', function () {
 
 // Route::get('/Vine_master', [Vine_mastercontroller::class, 'index']);
  Route::resource("/Vine_master", Vine_masterController::class);
+
+ Route::resource("/Vine_offer", Vine_offerController::class);
+ Route::resource("/Vine_user", Vine_userController::class);
 

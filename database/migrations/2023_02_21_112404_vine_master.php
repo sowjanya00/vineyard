@@ -17,8 +17,9 @@ class VineMaster extends Migration
             $table->increments('Vine_id');;
             $table->string("Vine_name");
             $table->string("Googleparameters");
-            $table->string("Targetedcustomers");
-            $table->string("Usedcustomers");
+            $table->string("Url");
+            $table->integer("Targetedcustomers");
+            $table->integer("Usedcustomers");
             $table->string("Contactperson");
             $table->string("Mobileno");
             $table->string("Emailid");
